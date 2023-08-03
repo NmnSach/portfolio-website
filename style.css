@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@100&family=Raleway:wght@200;400&family=Roboto:wght@400;700&family=Urbanist:wght@200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    background: #000000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    animation: gradient 15s ease infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    background: #dda9ff;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small{
+    width: 200px;
+    height: 200px;
+    right: -100px;
+    top: -100px;
+  }
+  
+  .medium{
+    width: 400px;
+    height: 400px;
+    right: -200px;
+    top: -200px;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    right: -300px;
+    top: -300px;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    right: -400px;
+    top: -400px;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    right: -500px;
+    top: -500px;
+  }
+  
+  .shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }
+
+
+.container {
+    padding: 10px 10%;
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 25px;
+    width: 220px;
+    color: white;
+    
+    
+}
+
+.logolink{
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 15%;
+    font-size: 30px;
+    width: 700px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+.header-text h1 span {
+    color: #b650fa;
+}
+
+/* ----------ABOUT---------- */
+#about {
+    width: 100%;
+    padding: 30px 0px;
+    color: #ababab;
+    
+}
+
+.aboutcard{
+    margin-left: 75px;
+    align-self: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    max-width: 90%;
+    height: 100%;
+    border: none;
+    border-radius: 100px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    margin-top: 120px;
+    margin-left: 30px;
+    width: 75%;
+    border-radius: 30px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.playerpick{
+    font-size: 25px;
+    color: #cc91f3;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.hovertoknow{
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+.sub-text{
+    width: 600px;
+    text-align: justify;
+    font-weight: lighter ;
+    font-size: 18px;
+    color: black;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    color: black;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #6d03cf;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links:hover::after{
+width: 100%;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b650fa;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* ----------SERVICES---------- */
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 15px;
+    line-height: 30 px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ----------PORTFOLIO---------- */
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    transform: translateX(-400%);
+    transition: transform 0.5s ease;
+
+}
+
+.work-list:nth-of-type(even){
+    transform: translateX(400%);
+}
+
+.work-list.show{
+    transform: translateX(0);
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: #8e09db;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.5s;
+}
+
+.layer h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.layer h5{
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.layer a {
+    margin-top: 30px;
+    color: #080808;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #b605ec;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.75s;
+}
+
+.btn:hover {
+    background: #b605ec;
+}
+
+/* ----------CONTACT---------- */
+.contact-left {
+    flex-basis: 35%;
+}
+.contact_subhead{
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #b605ec;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #b605ec;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block
+}
+
+.btn.btn3 {
+    background: #080808;
+    margin-top: 30px;
+    transition: background 0.5;
+
+}
+
+.btn.btn3:hover {
+    background: #b605ec;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
+    transition: color 0.5s;
+}
+
+.copyright i:hover {
+    color: #fff;
+}
+
+nav .fas {
+    display: none;
+}
+
+/* ----------CSS FOR SMALL SCREEN---------- 
+@media only screen and (max-width: 450px) {
+
+    *{
+        overflow-x:hidden ;
+    }
+
+    .header-text {
+        margin-top: 50%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200;
+        right: 0;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+}
+*/
+/* ----------CSS FOR SMALL SCREEN---------- */
+/*@media only screen and (max-width: 600px) {
+
+    /* Adjust the header image and text size for small screens */
+
+    
+   /* .header-text {
+        margin-top: 50%;
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    /* Show the navigation menu on small screens */
+    /*nav ul {
+        display: none;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200px;
+        /* Increased the width to accommodate the menu items */
+    /*    right: 0;
+        height: 100vh;
+        padding-top: 50px;
+        transform: translateX(200px);
+        /* Off-canvas menu, initially hidden */
+/*        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+        /* Show the menu when 'show' class is applied */
+  /*  }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+}
+*/
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    .ripple-background{
+        display: none;
+    }
+
+    .container {
+        padding: 10px 5%;
+    }
+
+    .header-text {
+        margin-top: 10%;
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .header-text h1 {
+        margin-top: 100px;
+        font-size: 35px;
+    }
+
+    .about-col-1 img {
+        margin-top: 30px;
+        margin-left: 100px;
+        width: 100%;
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .aboutcard{
+        margin-left: 20px;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .about-title{
+        margin-left: 20px;
+    }
+
+    .sub-title {
+        
+        font-size: 35px;
+    }
+
+    .sub-text {
+        margin-bottom: 30px;
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .tab-links {
+        
+        font-size: 16px;
+    }
+
+    .services-list div {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .layer h2 {
+        font-size: 24px;
+    }
+
+    .layer h5 {
+        font-size: 14px;
+    }
+
+    .layer a {
+        font-size: 14px;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    .contact-left p i {
+        font-size: 20px;
+    }
+
+    .contact-left h1{
+        font-size: 25px;
+        margin-left: 3px;
+    }
+
+    .contact-right form{
+        margin-left: 30px;
+        width: 70%;
+
+    }
+
+    .contact_subhead {
+        font-size: 10px;
+        
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+
+    .btn.btn2,
+    .btn.btn3{
+        font-size: 12px;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 70px;
+        background: #080808;
+        z-index: 1;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+}
