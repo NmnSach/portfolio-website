@@ -805,13 +805,14 @@ nav .fas {
         font-size: 25px;
     }
 
-    .extended{
-        width: 100%;
+    .extended {
+        width: 80%;
         height: 100%;
     }
 
-    .extended iframe{
+    .extended iframe {
         width: 100%;
-        height: 100%;
+        height: 500px;
+        
     }
 }
